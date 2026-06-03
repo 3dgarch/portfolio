@@ -1,0 +1,15 @@
+@import './variables';
+
+body{
+  color: #fff;
+  background-color: $color-fondo;
+  font-family: "Poppins", sans-serif;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+ul{
+  list-style: none;
+}
