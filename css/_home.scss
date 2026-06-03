@@ -1,13 +1,59 @@
 .home {
   text-align: center;
-  margin-top: 50px;
-  figure {
-    display: inline-block;
+  margin-top: 30px;
+  &__background {
+    position: relative;
+    img{
+      object-fit: cover;
+      
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    padding: 0 60px;
+
     img {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      object-fit: cover;      
+      object-fit: cover;
+    }
+    h2 {
+      font-size: 6.3rem;
+      font-weight: bold;
+      letter-spacing: -2px;
+      margin-bottom: 1.5rem;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 2.6rem;
+      /* 1. Definimos el degradado como fondo */
+      background: linear-gradient(to right, $color-primary, #fdfcfb);
+
+      /* 2. Recortamos el fondo al tamaño del texto */
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      /* 3. Hacemos que el color del texto sea transparente para ver el fondo */
+      color: transparent;
+      margin-bottom: 1.5rem;
+    }
+    p{
+      font-size: 1.6rem;
+      margin-bottom: 5rem;
+      line-height: 1.5;
+      text-align: justify;
+      color: #E1E1E1;
+    }
+    button{
+      background: none;
+      border: 1px solid $color-primary;
+      color: $color-white;
+      padding: 1.5rem 2.5rem;
+      border-radius: 40px;
     }
   }
 }

@@ -2,17 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 6rem;
+  padding: 2.5rem 6rem;
   .logo{
     font-family: $font-logo;
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   .nav{
     ul{
       display: flex;
       li{
-        margin-left: 2.5rem;
+        margin-left: 3.5rem;
         color: $color-secondary;
+        a{
+          font-size: 1.8rem;
+        }
       }
     }
   }
@@ -20,5 +23,6 @@
     border: 1px solid $color-primary;
     padding: 0.8rem 1rem;
     border-radius: 8px;
+    font-size: 1.5rem;
   }
 }

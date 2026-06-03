@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.2 | 20191019
    License: none (public domain)
@@ -57,6 +58,11 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
 body {
   color: #fff;
   background-color: #1A1A1A;
@@ -77,36 +83,83 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 6rem;
+  padding: 2.5rem 6rem;
 }
 .header .logo {
   font-family: "Oleo Script", system-ui;
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 .header .nav ul {
   display: flex;
 }
 .header .nav ul li {
-  margin-left: 2.5rem;
+  margin-left: 3.5rem;
   color: #C1C1C1;
+}
+.header .nav ul li a {
+  font-size: 1.8rem;
 }
 .header .contact-btn {
   border: 1px solid #4FC3F7;
   padding: 0.8rem 1rem;
   border-radius: 8px;
+  font-size: 1.5rem;
 }
 
 .home {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
-.home figure {
-  display: inline-block;
+.home__background {
+  position: relative;
 }
-.home figure img {
-  width: 300px;
-  height: 300px;
+.home__background img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home__content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  padding: 0 60px;
+}
+.home__content img {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.home__content h2 {
+  font-size: 6.3rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+}
+.home__content h3 {
+  font-weight: 600;
+  font-size: 2.6rem;
+  /* 1. Definimos el degradado como fondo */
+  background: linear-gradient(to right, #4FC3F7, #fdfcfb);
+  /* 2. Recortamos el fondo al tamaño del texto */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* 3. Hacemos que el color del texto sea transparente para ver el fondo */
+  color: transparent;
+  margin-bottom: 1.5rem;
+}
+.home__content p {
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: #E1E1E1;
+}
+.home__content button {
+  background: none;
+  border: 1px solid #4FC3F7;
+  color: #fff;
+  padding: 1.5rem 2.5rem;
+  border-radius: 40px;
 }/*# sourceMappingURL=main.css.map */
