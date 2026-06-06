@@ -8,3 +8,12 @@ $color-white: #fff;
 
 
 $font-logo: "Oleo Script", system-ui;
+
+$breakpoints: (
+  'mobile-sm': 360px,
+  'mobile-md': 480px,
+  'table': 768px,
+  'laptop': 1024px,
+  'desktop': 1200px,
+  'desktop-xl': 1440px
+)

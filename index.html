@@ -1,52 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio - Ezed</title>
+  <title>Portafolio | Ezed - Frontend Developer</title>
   <link rel="stylesheet" href="./css/main.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script:wght@400;700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <a class="logo" href="">Ezed.</a>
-    <nav class="nav">
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Resume</a></li>
-      </ul>
+    <div class="header__container container">
+      <a class="header__logo" href="#home">Ezed.</a>
 
-    </nav>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__item"><a class="header__link" href="#home">Home</a></li>
+          <li class="header__item"><a class="header__link" href="#about">About</a></li>
+          <li class="header__item"><a class="header__link" href="#projects">Projects</a></li>
+          <li class="header__item"><a class="header__link" href="#services">Services</a></li>
+          <li class="header__item"><a class="header__link" href="#resume">Resume</a></li>
+        </ul>
+      </nav>
 
-    <a class="contact-btn" href="">Contact Me</a>
-    <img src="./assets/vector-light.svg" alt="">
-
+      
+      <a class="btn btn--contact" href="#contact">Contact Me</a>
+      <img src="./assets/vector-light.svg" alt="Cambiar tema" class="header__theme-icon">
+      <button class="header__toggle" aria-label="Abrir menú de navegación">☰</button>
+    </div>
   </header>
-  <section class="home">
-    <figure class="home__background">
-      <img src="./assets/Rectangle.png" alt="image-fondo">
-      <div class="home__content">
-        <img src="./assets/code.jpg" alt="image-home">
-        <h2>Edgar Chavez</h2>
-        <h3>Frontend Developer</h3>
-        <p>
-          Construyo experiencias digitales robustas aprovechando todo el potencial del stack MERN. Desde la
-          implementación de interfaces interactivas hasta la gestión eficiente de bases de datos y APIs RESTful.
-          Comprometido con el desarrollo de software limpio y escalable
-        </p>
-        <button class="cv-btn">Download CV</button>
-      </div>
-    </figure>
 
-  </section>
+  <!-- <main>
+    <section id="home" class="home">
+      <div class="home__hero-bg">
+        <img src="./assets/Rectangl.png" alt="" aria-hidden="true">
+      </div>
+
+      <div class="home__container container">
+        <div class="home__image-wrapper">
+          <img src="./assets/cod.jpg" alt="Fotografía de Edgar Chavez trabajando en código" class="home__profile-img">
+        </div>
+
+        <div class="home__content">
+          <h1 class="home__title">Edgar Chavez</h1>
+          <h2 class="home__subtitle">Frontend Developer</h2>
+          <p class="home__description">
+            Construyo experiencias digitales robustas aprovechando todo el potencial del stack MERN. Desde la
+            implementación de interfaces interactivas hasta la gestión eficiente de bases de datos y APIs RESTful.
+            Comprometido con el desarrollo de software limpio y escalable.
+          </p>
+          <a href="./assets/tu-cv.pdf" download class="btn btn--primary">Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main> -->
 </body>
 
 </html>

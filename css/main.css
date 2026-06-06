@@ -80,30 +80,51 @@ ul {
 }
 
 .header {
+  padding: 2rem;
+}
+.header__logo {
+  font-size: 2.5rem;
+  font-family: "Oleo Script", system-ui;
+}
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 6rem;
 }
-.header .logo {
-  font-family: "Oleo Script", system-ui;
-  font-size: 3.2rem;
+.header__nav {
+  display: none;
 }
-.header .nav ul {
+@media screen and (min-width: 480px) {
+  .header__nav {
+    display: block;
+  }
+}
+.header__menu {
   display: flex;
+  gap: 2rem;
 }
-.header .nav ul li {
-  margin-left: 3.5rem;
-  color: #C1C1C1;
+.header__link {
+  font-size: 1.6rem;
 }
-.header .nav ul li a {
-  font-size: 1.8rem;
-}
-.header .contact-btn {
+.header .btn--contact {
+  font-size: 1.6rem;
   border: 1px solid #4FC3F7;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+}
+.header__toggle {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 480px) {
+  .header__toggle {
+    display: none;
+  }
 }
 
 .home {

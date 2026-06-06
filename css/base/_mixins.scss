@@ -1,0 +1,12 @@
+@import 'variables';
+
+@mixin respond-to($breakpoint){
+  @if map-has-key($breakpoints, $breakpoint){
+    $value: map-get($breakpoints, $breakpoint);
+    @media screen and (min-width: $value){
+      @content;
+    }
+  }@else{
+    @warn 'El breakpoint #{$breakpoint} no existe en el mapa.';
+  }
+}
