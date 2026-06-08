@@ -1,42 +1,50 @@
 .header {
-  padding: 2rem;
-  &__logo{
-    font-size: 2.5rem;
+  padding: 2.5rem 0.5rem;
+  @include respond-to(mobile-md){
+    padding: 2.5rem 3.5rem;
+  }
+  &__logo {
+    font-size: 3.5rem;
     font-family: $font-logo;
   }
-  &__container{
+  &__container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__nav{
+  &__nav {
     display: none;
-    @include respond-to(mobile-md){
-      display: block
+    @include respond-to(mobile-md) {
+      display: block;
     }
   }
-  &__menu{
+  &__menu {
     display: flex;
-    gap: 2rem
+    gap: 2rem;
   }
-  &__link{
-    font-size:1.6rem;
-  }
-  .btn--contact{
+  &__link {
     font-size: 1.6rem;
-    border: 1px solid $color-primary;
-    padding: 1rem 2rem;
-    border-radius: 1.5rem;
   }
-  &__toggle{
+  .btn--contact {
+    font-size: 1.4rem;
+    border: 1px solid $color-primary;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1.5rem;
+    @include respond-to(mobile-md){
+      font-size: 1.6rem;
+      padding: 0.8rem 1.5rem;
+    }
+    
+  }
+  &__toggle {
     background: transparent;
     color: $color-white;
     border: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
-    @include respond-to(mobile-md){
+    @include respond-to(mobile-md) {
       display: none;
     }
   }
