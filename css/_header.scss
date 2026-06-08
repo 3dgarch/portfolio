@@ -1,5 +1,5 @@
 .header {
-  padding: 2.5rem 0.5rem;
+  padding: 2rem 0.5rem;
   @include respond-to(mobile-md){
     padding: 2.5rem 3.5rem;
   }
