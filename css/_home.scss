@@ -1,74 +1,41 @@
 .home {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  &__container {
-    position: relative;
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
+  .hero {
+    background: url("../assets/Rectangle.png") no-repeat center top;
+    height: 100vh;
 
-    &__hero-bg {
-      width: 100%;
-      img {
-        object-fit: cover;
-        width: 100%;
-      }
-    }
-  }
-  &__content {
-    position: absolute;
-    width: 100%;
-    top: 5%;
-    text-align: center;
-    &__perfil {
-      width: 100%;
-      margin-bottom: 2rem;
-      img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-    }
-    &__info {
-      h1 {
-        font-size: 4.2rem;
-        font-weight: bold;
-        font-family: "Poppins", sans-serif;
-        letter-spacing: -0.05em;
-        margin-bottom: 1rem;
-      }
-      h2 {
-        font-size: 1.8rem;
-        font-weight: semi-bold;
-        font-family: "Poppins", sans-serif;
-        margin-bottom: 1.5rem;
-        /* Definimos el degradado */
-        background: linear-gradient(90deg, $color-primary, white);
+    .content {
+      text-align: center;
+      margin-top: 8%;
+      padding: 0 5rem;
 
-        /* Recortamos el fondo al contorno de las letras */
-        -webkit-background-clip: text;
-        background-clip: text;
-
-        /* Hacemos el texto transparente para ver el fondo */
-        color: transparent;
-
-        /* Opcional: mejora visual si el texto es muy grueso */
-        font-weight: 800;
+      &__perfil {
+        margin-bottom: 2rem;
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+        }
       }
-      p {
-        font-size: 1.4rem;
-        line-height: 1.6;
-        // text-align: justify;
-        
-        margin-bottom: 2.5rem;
-      }
-      .btn {
-        border: 1px solid $color-primary;
-        padding: 0.8rem 1.5rem;
-        border-radius: 1.5rem;
+      &__info{
+        h1{
+          font-size: 3.2rem;
+          font-weight: bold;
+        }
+        h2{
+          font-size: 1.8rem;
+          font-weight: 400;
+          margin-bottom: 2rem;
+        }
+        p{
+          margin-bottom: 4rem;
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+        .btn--primary{
+          border: 1px solid $color-primary;
+          border-radius: 2rem;
+          padding: 1rem 2.5rem;
+        }
       }
     }
   }

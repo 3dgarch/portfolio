@@ -137,72 +137,39 @@ ul {
   }
 }
 
-.home {
-  width: 100%;
+.home .hero {
+  background: url("../assets/Rectangle.png") no-repeat center top;
   height: 100vh;
-  position: relative;
 }
-.home__container {
-  position: relative;
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.home__container__hero-bg {
-  width: 100%;
-}
-.home__container__hero-bg img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-.home__content {
-  position: absolute;
-  width: 100%;
-  top: 5%;
+.home .hero .content {
   text-align: center;
+  margin-top: 8%;
+  padding: 0 5rem;
 }
-.home__content__perfil {
-  width: 100%;
+.home .hero .content__perfil {
   margin-bottom: 2rem;
 }
-.home__content__perfil img {
+.home .hero .content__perfil img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.home__content__info h1 {
-  font-size: 4.2rem;
+.home .hero .content__info h1 {
+  font-size: 3.2rem;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: -0.05em;
-  margin-bottom: 1rem;
 }
-.home__content__info h2 {
+.home .hero .content__info h2 {
   font-size: 1.8rem;
-  font-weight: semi-bold;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 1.5rem;
-  /* Definimos el degradado */
-  background: linear-gradient(90deg, #4FC3F7, white);
-  /* Recortamos el fondo al contorno de las letras */
-  -webkit-background-clip: text;
-  background-clip: text;
-  /* Hacemos el texto transparente para ver el fondo */
-  color: transparent;
-  /* Opcional: mejora visual si el texto es muy grueso */
-  font-weight: 800;
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
-.home__content__info p {
+.home .hero .content__info p {
+  margin-bottom: 4rem;
   font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
+  line-height: 2rem;
 }
-.home__content__info .btn {
+.home .hero .content__info .btn--primary {
   border: 1px solid #4FC3F7;
-  padding: 0.8rem 1.5rem;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
+  padding: 1rem 2.5rem;
 }/*# sourceMappingURL=main.css.map */
