@@ -2,39 +2,54 @@
   .hero {
     background: url("../assets/Rectangle.png") no-repeat center top;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond-to(desktop) {
+      align-items: flex-start;
+      padding-top: 10rem;
+    }
 
     .content {
       text-align: center;
-      margin-top: 8%;
       padding: 0 5rem;
+
+      @include respond-to(desktop) {
+        width: 40%;
+      }
 
       &__perfil {
         margin-bottom: 2rem;
+
         img {
-          width: 200px;
-          height: 200px;
+          width: 300px;
+          height: 300px;
           border-radius: 50%;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0), $color-primary);
+          padding: 3px;
         }
       }
-      &__info{
-        h1{
+      &__info {
+        h1 {
           font-size: 3.2rem;
           font-weight: bold;
         }
-        h2{
+        h2 {
           font-size: 1.8rem;
           font-weight: 400;
           margin-bottom: 2rem;
+          color: $color-primary;
         }
-        p{
+        p {
           margin-bottom: 4rem;
           font-size: 1.4rem;
           line-height: 2rem;
         }
-        .btn--primary{
-          border: 1px solid $color-primary;
+        .btn--primary {
+          font-size: 1.4rem;
           border-radius: 2rem;
           padding: 1rem 2.5rem;
+          border: 1px solid $color-primary;
         }
       }
     }
