@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.2 | 20191019
    License: none (public domain)
@@ -64,7 +65,7 @@ html {
 
 body {
   color: #fff;
-  background-color: #1A1A1A;
+  background-color: #272727;
   font-family: "Poppins", sans-serif;
 }
 
@@ -78,135 +79,132 @@ ul {
   list-style: none;
 }
 
-.header {
-  padding: 2rem 0.5rem;
-  position: relative;
-}
-@media screen and (min-width: 480px) {
-  .header {
-    padding: 2.5rem 3.5rem;
-  }
-}
-.header__logo {
-  font-size: 3.5rem;
-  font-family: "Oleo Script", system-ui;
-}
-.header__container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.header .container {
+  border-bottom: 2px solid #393939;
+  padding: 3rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header__nav {
+.header .container .logo {
+  font-size: 3.5rem;
+  font-family: roboto, system-ui;
+  font-weight: 600;
+}
+.header .container .navbar {
   display: none;
 }
+.header .container .navbar__menu {
+  display: flex;
+  gap: 6rem;
+}
+.header .container .navbar__menu a {
+  font-size: 1.6rem;
+}
 @media screen and (min-width: 480px) {
-  .header__nav {
+  .header .container .navbar {
     display: block;
   }
 }
-.header__menu {
-  display: flex;
-  gap: 2rem;
-}
-.header .menu-active {
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-}
-.header .menu-active ul {
-  flex-direction: column;
-  text-align: center;
-  background: #1A1A1A;
-}
-.header .menu-active ul li {
-  width: 100%;
-  padding: 1rem 0;
-}
-.header .menu-active ul li:hover {
-  background: #2B2B2B;
-}
-.header__link {
-  font-size: 1.6rem;
-}
-.header .btn--contact {
-  font-size: 1.4rem;
-  border: 1px solid #4FC3F7;
-  padding: 0.5rem 0.8rem;
-  border-radius: 1.5rem;
-}
-@media screen and (min-width: 480px) {
-  .header .btn--contact {
-    font-size: 1.6rem;
-    padding: 0.8rem 1.5rem;
-  }
-}
-.header__toggle {
+.header .container #toggle {
   background: transparent;
-  color: #fff;
+  color: #1f293d;
   border: none;
   font-size: 2.5rem;
   cursor: pointer;
 }
 @media screen and (min-width: 480px) {
-  .header__toggle {
+  .header .container #toggle {
     display: none;
   }
 }
 
-.home .hero {
-  background: url("../assets/Rectangle.png") no-repeat center top;
-  height: 100vh;
+.hero {
+  margin-top: 3.5rem;
+}
+.hero .container {
+  padding: 3rem 0;
+}
+.hero .container h1 {
+  font-size: 4rem;
+  font-family: Arial, sans-serif;
+  margin-bottom: 6.5rem;
+  width: 90%;
+  color: #34d399;
+}
+.hero .container .content {
   display: flex;
+}
+.hero .container .content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+.hero .container .content__biography {
+  width: 650px;
+  display: flex;
+  padding-right: 8.5rem;
+}
+.hero .container .content__biography .image {
+  margin-right: 2rem;
+  width: 250px; /* Ajusta el tamaño del borde según sea necesario */
+  aspect-ratio: 1/1; /* Garantiza que siempre sea un cuadrado perfecto */
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+  /* 3. Creamos el borde con degradado usando el pseudo-elemento */
+}
+.hero .container .content__biography .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 2px; /* Grosor del borde */
+  /* Tonos exactos de la imagen: Cian brillante arriba y verde abajo */
+  background: linear-gradient(180deg, #00f2fe 0%, #10b981 100%);
+  /* Enmascarado perfecto para conservar el centro transparente */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.hero .container .content__biography .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Evita que la imagen se deforme */
+}
+.hero .container .content__biography p {
+  color: #A1A1A1;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+.hero .container .content__social-medias .links {
+  display: flex;
+  gap: 2rem;
+}
+.hero .container .content__social-medias .links a {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
+  border: 1px solid #34d399;
 }
-@media screen and (min-width: 1200px) {
-  .home .hero {
-    align-items: flex-start;
-    padding-top: 10rem;
-  }
+.hero .container .content__social-medias .links a:hover {
+  box-shadow: 0px 0px 10px #34d399;
 }
-.home .hero .content {
-  text-align: center;
+.hero .container .content__social-medias .links a i {
+  color: #34d399;
+  transition: all 0.3s ease-in-out;
 }
-@media screen and (min-width: 1200px) {
-  .home .hero .content {
-    width: 40%;
-  }
-}
-.home .hero .content__perfil {
-  margin-bottom: 2rem;
-}
-.home .hero .content__perfil img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), #4FC3F7);
-  padding: 3px;
-}
-.home .hero .content__info h1 {
-  font-size: 3.2rem;
-  font-weight: bold;
-}
-.home .hero .content__info h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: #4FC3F7;
-}
-.home .hero .content__info p {
-  margin-bottom: 4rem;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  padding: 0 24px;
-}
-.home .hero .content__info .btn--primary {
-  font-size: 1.4rem;
-  border-radius: 2rem;
-  padding: 1rem 2.5rem;
-  border: 1px solid #4FC3F7;
+.hero .container .content__social-medias .links a i:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=main.css.map */

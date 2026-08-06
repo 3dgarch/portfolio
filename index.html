@@ -12,51 +12,52 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <header class="header">
-    <div class="header__container container">
-      <a class="header__logo" href="#home">Ezed.</a>
-
-      <nav class="header__nav" id="menu">
-        <ul class="header__menu">
-          <li class="header__item"><a class="header__link" href="#home">Home</a></li>
-          <li class="header__item"><a class="header__link" href="#about">About</a></li>
-          <li class="header__item"><a class="header__link" href="#projects">Projects</a></li>
-          <li class="header__item"><a class="header__link" href="#services">Services</a></li>
-          <li class="header__item"><a class="header__link" href="#resume">Resume</a></li>
+    <div class="container">
+      <a class="logo" href="#home">Ezed.</a>
+      <button id="toggle">☰</button>
+      <nav class="navbar" id="menu">
+        <ul class="navbar__menu">
+          <li class=""><a class="" href="#inicio">Inicio</a></li>
+          <li class=""><a class="" href="#proyectos">Proyectos</a></li>
+          <li class=""><a class="" href="#habilidades">Habilidades</a></li>
+          <li class=""><a class="" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-
-
-      <a class="btn btn--contact" href="#contact">Contact Me</a>
-      <img src="./assets/vector-light.svg" alt="Cambiar tema" class="header__theme-icon">
-      <button id="btn-menu" class="header__toggle" aria-label="Abrir menú de navegación">☰</button>
     </div>
   </header>
 
 
-  <section id="home" class="home">
+  <section class="hero">
     <div class="container">
-      <div class="hero">
-        <div class="content">
-          <div class="content__perfil">
-            <img src="./assets/code.jpg" alt="Fotografía de Edgar Chavez trabajando en código" class="home__profile-img">
+      <h1>
+        Hola, soy Edgar Chavez. Desarrollador de software enfocado en Frontend y Backend.
+      </h1>
+      <div class="content">
+        <div class="content__biography">
+          <div class="image">
+            <img src="./assets/perfil.png" alt="Imagen de perfil">
           </div>
-          <div class="content__info">
-            <h1 class="title">Edgar Chavez</h1>
-            <h2 class="subtitle">Frontend Developer</h2>
-            <p class="description">
-              Construyo experiencias digitales robustas aprovechando todo el potencial del stack MERN. Desde la
-              implementación de interfaces interactivas hasta la gestión eficiente de bases de datos y APIs RESTful.
-              Comprometido con el desarrollo de software limpio y escalable.
-            </p>
-            <a href="./assets/tu-cv.pdf" download class="btn btn--primary">Download CV</a>
+          <div>
+            <h2>Biografia</h2>
+            <p>Desarrollador enfocado en el ecosistema .NET (#) y SQL Server para el desarrollo de APIs y logica de
+              negocio, complementando con React.js para la creacion de interfaces dinamicas.</p>
+          </div>
+        </div>
+        <div class="content__social-medias">
+          <h2>Redes Sociales</h2>
+          <div class="links">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
 
