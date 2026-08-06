@@ -8,7 +8,18 @@
       font-family: Arial, sans-serif;
       margin-bottom: 6.5rem;
       width: 90%;
-      color: $color-secondary;
+      /* 1. Definimos el degradado horizontal (de verde a cian) */
+      background: linear-gradient(90deg, #10b981 0%, #00f2fe 100%);
+
+      /* 2. Recortamos el fondo al contorno de las letras */
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      /* 3. Volvemos el color del texto transparente para revelar el fondo */
+      color: transparent;
+
+      /* Opcional: mejora la nitidez del degradado si la fuente es gruesa */
+      font-weight: 700;
     }
     .content {
       display: flex;
