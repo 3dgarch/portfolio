@@ -1,13 +1,16 @@
 .hero {
   margin-top: 3.5rem;
   .container {
-    padding: 3rem 0;
-
+    padding: 3rem 1rem;
+    
+    
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       font-family: Arial, sans-serif;
+      text-align: center;
+      
       margin-bottom: 6.5rem;
-      width: 90%;
+      width: 100%;
       /* 1. Definimos el degradado horizontal (de verde a cian) */
       background: linear-gradient(90deg, #10b981 0%, #00f2fe 100%);
 
@@ -22,25 +25,25 @@
       font-weight: 700;
     }
     .content {
-      display: flex;
-
       h2 {
         font-size: 2rem;
         font-weight: 600;
         font-family: Arial, sans-serif;
         margin-bottom: 2rem;
+        text-align: center;
       }
       &__biography {
-        width: 650px;
-        display: flex;
+        width: 100%;
         padding-right: 8.5rem;
-        .image {
-          margin-right: 2rem;
-          width: 250px; /* Ajusta el tamaño del borde según sea necesario */
-          aspect-ratio: 1 / 1; /* Garantiza que siempre sea un cuadrado perfecto */
+        .image-perfil {
+          width: 100%; 
           border-radius: 50%;
+          
+          margin-right: 2rem;
+          aspect-ratio: 1 / 1; /* Garantiza que siempre sea un cuadrado perfecto */
           position: relative;
           overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+          margin-bottom: 2.5rem;
 
           /* 3. Creamos el borde con degradado usando el pseudo-elemento */
           &::after {
@@ -66,18 +69,26 @@
 
           img {
             width: 100%;
+            color: red;
             object-fit: cover; /* Evita que la imagen se deforme */
+            filter: brightness(0.8); // Ajusta el brillo
+            //filter: grayscale(100%); // Ajusta la saturación
+            
           }
         }
         p {
           color: $color-text;
           font-size: 1.6rem;
           font-family: "Poppins", sans-serif;
+          text-align: justify;
+          line-height: 1.2;
+          margin-bottom: 2rem;
         }
       }
       &__social-medias {
         .links {
           display: flex;
+          justify-content: center;
           gap: 2rem;
           a {
             display: flex;
