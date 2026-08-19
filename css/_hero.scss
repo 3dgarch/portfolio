@@ -3,7 +3,6 @@
   .container {
     padding: 3rem 1rem;
     
-    
     h1 {
       font-size: 3rem;
       font-family: Arial, sans-serif;
@@ -23,8 +22,22 @@
 
       /* Opcional: mejora la nitidez del degradado si la fuente es gruesa */
       font-weight: 700;
+      @include respond-to(laptop){
+        width: 80%;
+        font-size: 5.5rem;
+        text-align: start ;
+      }
     }
     .content {
+      width: 100%;
+      @include respond-to(laptop){
+        display: flex;
+        width: 80%;
+        .title{
+          text-align: start;
+        }
+      }
+      
       h2 {
         font-size: 2rem;
         font-weight: 600;
@@ -33,8 +46,12 @@
         text-align: center;
       }
       &__biography {
-        width: 100%;
-        padding-right: 8.5rem;
+        @include respond-to(laptop){
+          display: flex;
+          text-align: start;
+          padding-right: 6.5rem;
+        }
+        
         .image-perfil {
           width: 100%; 
           border-radius: 50%;
@@ -67,12 +84,23 @@
             pointer-events: none;
           }
 
+          @include respond-to(laptop){
+            width: 200px;
+            height: 100px;
+            
+          }
           img {
             width: 100%;
             color: red;
             object-fit: cover; /* Evita que la imagen se deforme */
             filter: brightness(0.8); // Ajusta el brillo
             //filter: grayscale(100%); // Ajusta la saturación
+
+            @include respond-to(laptop){
+              width: 100%;
+              
+              height: 100%;
+            }
             
           }
         }
