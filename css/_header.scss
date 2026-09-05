@@ -1,5 +1,7 @@
 .header {
   position: relative; /* 1. El header se vuelve el ancla para los elementos absolutos hijos */
+  
+
   .container {
     border-bottom: 2px solid $color-border;
     padding: 3rem 1rem;
@@ -38,7 +40,7 @@
       @include respond-to(mobile-md) {
         display: block;
       }
-      &.menu-active{
+      &.menu-active {
         display: block;
         position: absolute;
         top: 100%;
@@ -53,7 +55,7 @@
           a {
             display: block;
             padding: 1rem 2rem;
-            &:hover{
+            &:hover {
               color: $color-secondary;
               background: $color-border;
             }
@@ -62,5 +64,4 @@
       }
     }
   }
-  
 }

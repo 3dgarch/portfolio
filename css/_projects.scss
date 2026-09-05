@@ -1,0 +1,60 @@
+.projects {
+  .container {
+    padding: 3rem 1rem;
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .list {
+      
+      .item {
+        width: 100%;
+        margin-bottom: 6rem;
+        &__image {
+          background: $color-card;
+          width: 100%;
+          border-radius: 1rem;
+          margin-bottom: 1.5rem;
+          overflow: hidden;
+
+          
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            &:hover {
+            filter: brightness(0.8);
+            transform: scale(1.05);
+          }
+          }
+        }
+        &__description {
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: $color-text;
+            
+          }
+          h2{
+            @include respond-to(laptop){
+              font-size: 2.8rem;
+            }
+          }
+          p {
+            font-size: 1.5rem;
+            color: $color-text;
+            text-align: left;
+          }
+        }
+
+        @include respond-to(laptop){
+          display: flex;
+          gap: 2rem;
+        }
+      }
+    }
+  }
+}
